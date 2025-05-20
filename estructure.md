@@ -17,4 +17,7 @@
   create_ticket.php    # Crear nuevo ticket
   view_ticket.php      # Ver detalles + comentarios
   admin/              # Panel admin (opcional)
-    dashboard.php
+    dashboard.php     #resumen
+    tickets.php       #listar completo
+    users.php         #gestion usuarios
+  
