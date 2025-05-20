@@ -1,0 +1,32 @@
+/* Estilos generales */
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .ticket-table th, .ticket-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Badges de estado */
+  .status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+  }
+  .status-badge.open { background: #f39c12; }
+  .status-badge.in_progress { background: #3498db; }
+  .status-badge.resolved { background: #2ecc71; }
+  .status-badge.closed { background: #95a5a6; }
+  
+  /* Formularios */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
