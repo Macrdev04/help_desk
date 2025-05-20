@@ -20,4 +20,8 @@
     dashboard.php     #resumen
     tickets.php       #listar completo
     users.php         #gestion usuarios
+  agent/
+    dashboard.php     # resumen para agentes
+  user/
+    dashboard.php     # creacion de tickets para usuario e historial
   
