@@ -12,10 +12,10 @@
 -- 1. USUARIOS
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  u_name VARCHAR(100) NOT NULL,
   email VARCHAR(100) UNIQUE NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  role ENUM('admin', 'agent', 'user') DEFAULT 'user',
+  passwrd VARCHAR(255) NOT NULL,
+  rol ENUM('admin', 'agent', 'user') DEFAULT 'user',
   open_tickets_count INT DEFAULT 0,
   last_login TIMESTAMP NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
