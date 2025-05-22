@@ -155,11 +155,23 @@ CREATE TABLE user_activity (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
-
+-- 11. CONFIGURACION GLOBAL
+CREATE TABLE system_settings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  setting_name VARCHAR(100) UNIQUE NOT NULL,
+  setting_value TEXT NOT NULL,
+  description TEXT
+);
+-- Datos iniciales
+INSERT INTO system_settings VALUES
+    (NULL, 'max_open_tickets_per_agent', '5', 'Límite de tickets asignados simultáneamente'),
+    (NULL, 'business_hours_start', '09:00:00', 'Inicio de horario laboral'),
+    (NULL, 'business_hours_end', '18:00:00', 'Fin de horario laboral');
+    
 -- -------------------------------------------------------------------
 -- ÍNDICES RECOMENDADOS (MEJORA DE RENDIMIENTO)
 -- -------------------------------------------------------------------
-CREATE INDEX idx_tickets_status ON tickets(status);
-CREATE INDEX idx_tickets_type_severity ON tickets(ticket_type_id, severity_level_id);
-CREATE INDEX idx_tickets_assigned ON tickets(assigned_to);
-CREATE INDEX idx_notifications_unread ON notifications(user_id, is_read);
+-- Índices para consultas frecuentes
+CREATE INDEX idx_tickets_type_status ON tickets(ticket_type_id, status);
+CREATE INDEX idx_tickets_creator ON tickets(user_id, created_at);
+CREATE INDEX idx_notifications_user ON notifications(user_id, is_read, created_at);
