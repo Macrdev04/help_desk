@@ -1,5 +1,5 @@
 <?php
-require 'includes/config.php';
+require 'database.php';
 require 'includes/auth.php';
 
 // Simular retardo ante intentos fallidos

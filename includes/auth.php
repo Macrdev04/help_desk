@@ -5,7 +5,7 @@ function loginUser($email, $password) {
     global $db;
     
     // 1. Buscar usuario por email
-    $stmt = $db->prepare("SELECT id, name, email, password, role FROM users WHERE email = ?");
+    $stmt = $db->prepare("SELECT id, u_name, email, passwrd, role FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
