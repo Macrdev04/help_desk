@@ -6,7 +6,7 @@
 -- Fecha: 22-05-2025
 -- Descripción: Estructura de base de datos optimizada para un sistema de tickets
 -- =====================================================================
--- TABLAS PRINCIPALES
+-- TABLAS PRINCIPALES HELPDESK_DB @Macrdev04
 -- =====================================================================
 
 -- 1. USUARIOS

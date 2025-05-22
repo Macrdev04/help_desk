@@ -1,3 +1,4 @@
+
 /helpdesk
 │
 ├── /config                             # ⚙️ Configuraciones centralizadas
