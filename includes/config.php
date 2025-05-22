@@ -12,7 +12,7 @@ session_start([
 ]);
 
 $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-if ($conn->connect_error) {
+if ($db->connect_error) {
     error_log("Error de conexión a la base de datos: " . $conn->connect_error);
     header('Content-Type: application/json');
     http_response_code(500);
